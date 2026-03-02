@@ -10,5 +10,4 @@ void revNum(int num)
   num/=10;
  }
  printf("number after rev is:%d",rev);
- return 0;
 }
