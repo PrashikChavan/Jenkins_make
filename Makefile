@@ -1,8 +1,8 @@
 SRC = test.c display.c
-
+Target = Result
 all:
-	gcc $(SRC) -O Result
+	gcc $(SRC) -o $(Target)
 
 
 clean:
-	rm -f Result
+	rm -f $(Target)
