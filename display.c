@@ -1,4 +1,4 @@
-#include "dsipaly.h"
+#include "display.h"
 
 void revNum(int num)
 {
