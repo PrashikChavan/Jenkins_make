@@ -1,13 +1,19 @@
 #include "display.h"
 
-void revNum(int num)
+void rev_the_arr(int arr[],int size)
 {
- int rev=0,rem;
- while(num!=0)
+ int i;
+ for(int i=0;i<size/2;i++)
  {
-  rem=num%10;
-  rev=(rev*10)+rem;
-  num/=10;
+  int temp=arr[i];
+  arr[i]=arr[size-i-1];
+  arr[size-i-1]=temp;
  }
- printf("number after rev is:%d",rev);
+ 
+ printf("array after rev:");
+ for(i=0;i<size;i++)
+ {
+  printf("%d ",arr[i]);
+ }
+ 
 }

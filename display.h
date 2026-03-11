@@ -3,6 +3,6 @@
 
 #include<stdio.h>
 
-void revNum(int num);
+void rev_the_arr(int arr[],int size);
 
 #endif

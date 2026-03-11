@@ -1,8 +1,8 @@
 #include "display.h"
 int main()
 {
- int n=1234;
- revNum(n);
- printf("Pashik is Handsome by and Lover boy\n");
+ int arr[10]={1,2,3,4,5};
+ int size=5;
+ rev_the_arr(arr,size);
  return 0;
 }
