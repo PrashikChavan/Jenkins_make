@@ -1,4 +1,5 @@
 #include "display.h"
+
 struct node* head=NULL;
 struct node* create_list(int data)
 {
@@ -15,7 +16,7 @@ struct node* create_list(int data)
 void display()
 {
  struct node* ptr=head;
- while(head!=NULL)
+ while(ptr!=NULL)
  {
   printf("%d ",ptr->data);
   ptr=ptr->link;
