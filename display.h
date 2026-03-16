@@ -7,7 +7,7 @@ struct node{
  int data;
  struct node* link;
 };
-struct node* head;
+extern struct node* head;
 
 struct node* create_list(int data);
 
