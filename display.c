@@ -37,5 +37,5 @@ void nth_node_from_last(int n)
  {
   ptr2=ptr2->link;
  }
- printf("%d",ptr->data);
+ printf("%d",ptr22->data);
 }
