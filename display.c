@@ -1,19 +1,41 @@
 #include "display.h"
-
-void rev_the_arr(int arr[],int size)
+struct node* head=NULL;
+struct node* create_list(int data)
 {
- int i;
- for(int i=0;i<size/2;i++)
+ struct node* temp=head;
+ while(temp->link!=NULL)
  {
-  int temp=arr[i];
-  arr[i]=arr[size-i-1];
-  arr[size-i-1]=temp;
+  temp=temp->link;
+ }
+ temp->link=malloc(sizeof(struct node));
+ temp->link->data=data;
+ temp->link->link=NULL;
+}
+
+void display()
+{
+ struct node* ptr=head;
+ while(head!=NULL)
+ {
+  printf("%d ",ptr->data);
+  ptr=ptr->link;
+ }
+ printf("\n");
+}
+
+void nth_node_from_last(int n)
+{
+ int count=0;
+ struct node* ptr2=head;
+ while(ptr2!=NULL)
+ {
+  count++;
+  ptr2=ptr2->link;
  }
  
- printf("array after rev:");
- for(i=0;i<size;i++)
+ for(int i=0;i<count-n && ptr2->link!=NULL;i++)
  {
-  printf("%d ",arr[i]);
+  ptr2=ptr2->link;
  }
- 
+ printf("%d",ptr->data);
 }
