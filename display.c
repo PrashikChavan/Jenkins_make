@@ -33,9 +33,10 @@ void nth_node_from_last(int n)
   ptr2=ptr2->link;
  }
  
+ ptr2=head; 
  for(int i=0;i<count-n && ptr2->link!=NULL;i++)
  {
   ptr2=ptr2->link;
  }
- printf("%d",ptr2->data);
+ printf("from last nth node is %d",ptr2->data);
 }
